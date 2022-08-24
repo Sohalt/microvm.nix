@@ -72,8 +72,8 @@ nixpkgs.lib.nixosSystem {
           # Hand out IP addresses to MicroVMs.
           # Use `networkctl status virbr0` to see leases.
           networkConfig = {
-            DHCPServer = true;
-            IPv6SendRA = true;
+            DHCPServer = "yes";
+            IPv6SendRA = "yes";
           };
           addresses = [ {
             addressConfig.Address = "10.0.0.1/24";
